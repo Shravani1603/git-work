@@ -1,6 +1,6 @@
 FROM nginx:latest
 RUN yum update
 COPY ./index.html /usr/share/nginx/html/
-EXPOSE 80
+WORKDIR /data
 CMD ["nginx", "-g", "daemon off"]
 
